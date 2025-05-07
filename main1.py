@@ -1,22 +1,28 @@
 import toolfun
-import whois1
+import whoiscan
+import colorama
+from colorama import Fore, Back, Style
 from pyfiglet import*
 
 
 f=Figlet()
+global target
 
-print(f.renderText("Dnstool"))
+print(Fore.LIGHTBLUE_EX+f.renderText("Dnstool"))
 print("!!This tools is made only for testing and educational purpose !! \n \n")
-print("\t \t \t \tby godjoker\n \n")
+print("\t \t \t \tby godjoker\n \n"+Fore.RESET)
 
 
-toolfun.target=input("Enter target Domain :")
-whois1.target=toolfun.target
+target=input(Fore.LIGHTCYAN_EX+"Enter target Domain :")
+print(Fore.RESET)
+toolfun.target=target
+whoiscan.target=target
 
 def main_window():
     
     while True:
-        print('''
+        print(Fore.GREEN + '''
+        |--------------------DNS TOOL--------------------|
               [1].Whois
               [2].ipv4
               [3].1pv6
@@ -24,12 +30,18 @@ def main_window():
               [5].mx lookup
               [6].ns lookup
               [7].txt record
-              [8].All''')
+              [8].All
+              [9].Exit
+              ''')
+        print("-----------------------------------------------------")
+        print("-----------------------------------------------------")
+        print("-----------------------------------------------------")
+        print("-----------------------------------------------------"+Fore.RESET)
               
         opt=int(input("ENTER OPTION :"))
         
         if opt==1:
-            whois1.whois_scan()
+            whoiscan.whois_scan()
         elif opt==2:
             toolfun.a_record()
         elif opt==3:
@@ -43,7 +55,7 @@ def main_window():
         elif opt==7:
             toolfun.txt()
         elif opt==8:
-            whois1.whois_scan()
+            whoiscan.whois_scan()
             toolfun.a_record()
             toolfun.ipv6()
             toolfun.cname()
@@ -51,10 +63,13 @@ def main_window():
             toolfun.ns()
             toolfun.txt()
           
-            
+        elif opt==9:
+            print(Fore.RED+"Exiting the program...")
+            break
         else:
-            print("invalid option")
-
+            print(Fore.RED+"invalid option")
+            print(Fore.RESET)
+            
 
     
     

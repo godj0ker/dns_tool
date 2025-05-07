@@ -1,26 +1,26 @@
 import dns.resolver
+from colorama import *
 
 
-global target
 
 def a_record():
-    print("|--------------------A RECORD--------------------|")
+    print(Fore.GREEN+"|--------------------A RECORD--------------------|")
     try:
         info=dns.resolver.resolve(target,'A')
     
         for ip in info:
             print(ip)
     except dns.resolver.NoAnswer:
-        print("Query does not exist :")
+        print(Fore.RED+"Query does not exist :")
     except dns.resolver.NXDOMAIN:
-        print("Domain does not exist")
+        print(Fore.RED+"Domain does not exist")
     except Exception as e:
-        print(f"error occured :{e}")
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
         
 
 def ipv6():
     
-    print("|--------------------AAAA RECORD--------------------|")
+    print(Fore.GREEN+"|--------------------AAAA RECORD--------------------|")
     try:
         info=dns.resolver.resolve(target,'AAAA')
     
@@ -28,31 +28,31 @@ def ipv6():
             print(ip)
             
     except dns.resolver.NoAnswer:
-        print("Query does not exist :")
+        print(Fore.RED+"Query does not exist :")
     except dns.resolver.NXDOMAIN:
-        print("Domain does not exist")
+        print(Fore.RED+"Domain does not exist")
     except Exception as e:
-        print(f"error occured :{e}")
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
         
 def cname():
-    print("|--------------------CNAME RECORD--------------------|")
+    print(Fore.GREEN+"|--------------------CNAME RECORD--------------------|")
     try:
         cname_info=dns.resolver.resolve(target,'CNAME')
     
         for cn in cname_info:
-            print(cn) 
+            print(cn)
             
     except dns.resolver.NoAnswer:
-        print("Query does not exist :")
+        print(Fore.RED+"Query does not exist :")
     except dns.resolver.NXDOMAIN:
-        print("Domain does not exist")
+        print(Fore.RED+"Domain does not exist")
     except Exception as e:
-        print(f"error occured :{e}")
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
         
 
 def mx():
     
-    print("|--------------------MX RECORD--------------------|")
+    print(Fore.GREEN+"|--------------------MX RECORD--------------------|")
     try:
         mail_info=dns.resolver.resolve(target,'MX')
     
@@ -60,15 +60,15 @@ def mx():
             print(mailinfo)
         
     except dns.resolver.NoAnswer:
-        print("Query does not exist :")
+        print(Fore.RED+"Query does not exist :")
     except dns.resolver.NXDOMAIN:
-        print("Domain does not exist")
+        print(Fore.RED+"Domain does not exist")
     except Exception as e:
-        print(f"error occured :{e}")
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
          
 def ns():
     
-    print("|--------------------NS RECORD--------------------|")
+    print(Fore.GREEN+"|--------------------NS RECORD--------------------|")
     
     try:
         ns_info=dns.resolver.resolve(target,'NS')
@@ -77,29 +77,29 @@ def ns():
             print(nameserver)
             
     except dns.resolver.NoAnswer:
-        print("Query does not exist :")
+        print(Fore.RED+"Query does not exist :")
     except dns.resolver.NXDOMAIN:
-        print("Domain does not exist")
+        print(Fore.RED+"Domain does not exist")
     except Exception as e:
-        print(f"error occured :{e}")
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
         
 def txt():
     
     
-    print("|--------------------TXT RECORD--------------------|")
+    print(Fore.GREEN+"|--------------------TXT RECORD--------------------|")
     try:
         
         txt_rec=dns.resolver.resolve(target,'TXT')
     
         for rec in txt_rec:
             print(rec)
-        
+            
     except dns.resolver.NoAnswer:
-        print("Query does not exist :")
+        print(Fore.RED+"Query does not exist :")
     except dns.resolver.NXDOMAIN:
-        print("Domain does not exist")
+        print(Fore.RED+"Domain does not exist")
     except Exception as e:
-        print(f"error occured :{e}")
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
         
 
                
