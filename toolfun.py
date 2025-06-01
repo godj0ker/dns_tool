@@ -103,4 +103,30 @@ def txt():
         
 
                
+def soa():
     
+    
+    print(Fore.GREEN+"|--------------------SOA RECORD--------------------|")
+    try:
+        soa_rec=dns.resolver.resolve(target,'SOA')
+        for rec in soa_rec:
+            print(rec)
+    except dns.resolver.NoAnswer:
+        print(Fore.RED+"Query does not exist :")
+    except dns.resolver.NXDOMAIN:
+        print(Fore.RED+"Domain does not exist")
+    except Exception as e:
+        print(Fore.RED+f"error occured :{e}"+Fore.RESET)
+        
+def all_records():
+    print(Fore.GREEN+"|--------------------ALL SCAN--------------------|")
+    try:
+        a_record()
+        ipv6()
+        cname()
+        mx()
+        ns()
+        txt()
+        soa()
+    except Exception as e:
+        print(Fore.RED+f"Error occurred while retrieving all records: {e}"+Fore.RESET)
