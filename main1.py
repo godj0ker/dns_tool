@@ -10,7 +10,7 @@ global target
 
 print(Fore.LIGHTBLUE_EX+f.renderText("Dnstool"))
 print("!!This tools is made only for testing and legal purpose !! \n")
-print("\t \t \t Create : 22.02.2025\n")
+print("\t \t \t Create : 05.03.2025\n")
 print("\t \t \t Git hub: https://github.com/godj0ker\n")
 print("\t \t \t Version : v1.0\n")
 print("\t \t \t by Godjoker\n"+Fore.RESET)
