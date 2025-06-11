@@ -21,10 +21,18 @@ A simple Python tool for performing DNS lookups and WHOIS queries from the termi
 
 ```
 $ dnslookup
+
+
  ____            _             _
 |  _ \ _ __  ___| | ___   ___ | | ___   _ _ __
 | | | | '_ \/ __| |/ _ \ / _ \| |/ / | | | '_ \
-| |_| | | | \__ \ | (_) | (_) |   <| |_| | |_) |                                                                                                                                         |____/|_| |_|___/_|\___/ \___/|_|\_\\__,_| .__/                                                                                                                                                                                   |_|                                                                                                                                                                                                 
+| |_| | | | \__ \ | (_) | (_) |   <| |_| | |_) |                                                                                                                                         |____/|_| |_|___/_|\___/ \___/|_|\_\\__,_| .__/                                                                                                                                                                                   |_|
+
+
+
+
+
+                                                                                                                                    
                                                                                                                                                                                                                                            
 !!This tools is made only for testing and legal purpose !!                                                                                                                                                                                 
                                                                                                                                                                                                                                            
