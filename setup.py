@@ -9,7 +9,7 @@ setup(
     py_modules=['dns_lookup', 'whoiscan', 'enumerator', 'user_manuel'],
     install_requires=[
         'dnspython',
-        'whois',
+        'python-whois',
         'colorama',
         'requests',
         'argparse'
