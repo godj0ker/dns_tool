@@ -30,9 +30,6 @@ $ dnslookup
 
 
 
-
-
-                                                                                                                                    
                                                                                                                                                                                                                                            
 !!This tools is made only for testing and legal purpose !!                                                                                                                                                                                 
                                                                                                                                                                                                                                            
